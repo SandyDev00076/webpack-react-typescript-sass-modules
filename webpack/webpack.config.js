@@ -4,7 +4,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: path.resolve(__dirname, "..", "./src/index.tsx"),
     resolve: {
-        extensions: ['tsx', 'ts', 'js']
+        extensions: ['.tsx', '.ts', '.js'],
     },
     devServer: {
         port: 3010,
@@ -32,7 +32,4 @@ module.exports = {
             template: path.resolve(__dirname, "..", "./src/index.html")
         })
     ],
-    resolve: {
-        fallback: { "querystring": false }
-    }
 }
