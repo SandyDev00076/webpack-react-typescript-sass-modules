@@ -19,6 +19,28 @@ module.exports = {
                         loader: "babel-loader"
                     }
                 ]
+            },
+            {
+                test: /.s[ac]ss$/,
+                exclude: /.module.s[ac]ss/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ]
+            },
+            {
+                test: /.module.s[ac]ss/,
+                use: [
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: true
+                        }
+                    },
+                    "sass-loader"
+                ]
             }
         ]
     },
