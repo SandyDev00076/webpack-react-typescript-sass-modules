@@ -1,7 +1,16 @@
 import styles from "./Hello.module.scss";
 
 const Hello = () => {
-  return <h1 className={styles.greeting}>React Component Starter</h1>;
+  return (
+    <div className={styles.container}>
+      <div className={styles.panel}>
+        <h1 className={styles.greeting}>Hello</h1>
+        <h2 className={styles.secondLine}>
+          webpack <strong>roxx</strong>
+        </h2>
+      </div>
+    </div>
+  );
 };
 
 export default Hello;
